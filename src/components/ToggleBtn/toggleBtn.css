@@ -20,7 +20,3 @@
 .btn--icon:active {
   transform: translateY(-5px);
 }
-
-.btn--icon > svg {
-  fill: var(--clr-fg);
-}
