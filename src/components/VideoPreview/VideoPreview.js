@@ -1,7 +1,6 @@
 import { useRef } from 'react';
-import PropTypes from 'prop-types';
 import { Cloudinary } from '@cloudinary/url-gen';
-import { AdvancedImage, AdvancedVideo, lazyload } from '@cloudinary/react';
+import { AdvancedImage, AdvancedVideo } from '@cloudinary/react';
 import './VideoPreview.css';
 
 const VideoPreview = ({ video }) => {
@@ -38,7 +37,6 @@ const VideoPreview = ({ video }) => {
             .effect('e_preview:duration_4')
             .delivery('q_auto')
             .format('auto')}
-          plugins={[lazyload()]}
         />
       </div>
       <h3>{video.title}</h3>
@@ -46,7 +44,4 @@ const VideoPreview = ({ video }) => {
   );
 };
 
-VideoPreview.propTypes = {
-  video: PropTypes.node.isRequired
-};
 export default VideoPreview;
