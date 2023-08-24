@@ -1,21 +1,28 @@
 import { useContext } from 'react';
 import './App.css';
 import { ThemeContext } from './contexts/theme';
-import ToggleBtn from './components/ToggleBtn/toggleBtn';
 import Header from './components/Hearder/Header';
-
+import Container from './components/Container/Container';
+import videos from './data/videos.json';
 function App() {
   const [{ themeName }] = useContext(ThemeContext);
   return (
     <div className={`${themeName} app`}>
       <Header />
-      <div className="card">
-        <div style={{ display: 'flex', flexDirection: 'row-reverse' }}>
-          <ToggleBtn />
-        </div>
-        <h1>Toggle Theme App</h1>
-        <h4>Dark Mode is {themeName === 'dark' ? 'On' : 'Off'}</h4>
-      </div>
+      <Container>
+        <ul className="videos">
+          {videos.map((video) => {
+            return (
+              <li key={video.id}>
+                <div className="card">
+                  <video controls width="100%" src={`/videos/${video.id}.${video.format}`} />
+                  <h3>{video.title}</h3>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </Container>
     </div>
   );
 }

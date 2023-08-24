@@ -1,6 +1,6 @@
 .app {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw; */
+  /* height: 100vh; */
   padding: 20px;
   line-height: 1.5;
   color: var(--clr-fg);
@@ -31,13 +31,19 @@
 }
 
 .card {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
   border-radius: 15px;
   background: var(--clr-bg-alt);
   box-shadow: var(--shadow);
+}
+
+.videos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3em;
 }
