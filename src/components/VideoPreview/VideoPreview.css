@@ -1,0 +1,30 @@
+.card {
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--clr-bg-alt);
+    box-shadow: var(--shadow);
+  }
+
+  .card-video{
+    position: relative;
+  }
+
+  .card-video> img {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-video>video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+  }
+  .card-video:hover>video {
+    z-index: 2;
+    opacity: 1;
+  }

@@ -30,15 +30,6 @@
   align-items: center;
 }
 
-.card {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 20px;
-  border-radius: 15px;
-  background: var(--clr-bg-alt);
-  box-shadow: var(--shadow);
-}
-
 .videos {
   list-style: none;
   padding: 0;
