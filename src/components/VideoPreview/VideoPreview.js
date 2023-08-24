@@ -1,15 +1,10 @@
 import { useRef } from 'react';
-import { Cloudinary } from '@cloudinary/url-gen';
 import { AdvancedImage, AdvancedVideo } from '@cloudinary/react';
+import cld from '../../utils/cld';
 import './VideoPreview.css';
 
 const VideoPreview = ({ video }) => {
   const playerRef = useRef();
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'djcmywfzy'
-    }
-  });
   const onMouseOver = () => {
     playerRef.current.videoRef.current.play();
   };
